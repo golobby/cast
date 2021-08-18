@@ -1,4 +1,4 @@
-[![doc](https://godoc.org/github.com/golobby/cast?status.svg)](https://godoc.org/github.com/golobby/cast/v2)
+[![doc](https://godoc.org/github.com/golobby/cast?status.svg)](https://godoc.org/github.com/golobby/cast)
 [![build](https://travis-ci.com/golobby/cast.svg?branch=master)](https://travis-ci.com/golobby/cast)
 [![report](https://goreportcard.com/badge/github.com/golobby/cast)](https://goreportcard.com/report/github.com/golobby/cast)
 [![coverage](https://coveralls.io/repos/github/golobby/cast/badge.svg?branch=master)](https://coveralls.io/github/golobby/cast?branch=master)
