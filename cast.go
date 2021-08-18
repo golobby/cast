@@ -91,6 +91,7 @@ func FromString(value string, t string) (interface{}, error) {
 			return nil, err
 		}
 		return v, nil
+
 	case "string":
 		return value, nil
 	}
