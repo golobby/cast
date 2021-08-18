@@ -18,35 +18,35 @@ func TestFromString(t *testing.T) {
 	assert.NoError(t, err)
 	assert.Equal(t, 1, val)
 
-	val, err = FromString("str", "int")
+	_, err = FromString("str", "int")
 	assert.Error(t, err)
 
 	val, err = FromString("1", "int8")
 	assert.NoError(t, err)
 	assert.Equal(t, int8(1), val)
 
-	val, err = FromString("str", "int8")
+	_, err = FromString("str", "int8")
 	assert.Error(t, err)
 
 	val, err = FromString("1", "int16")
 	assert.NoError(t, err)
 	assert.Equal(t, int16(1), val)
 
-	val, err = FromString("str", "int16")
+	_, err = FromString("str", "int16")
 	assert.Error(t, err)
 
 	val, err = FromString("1", "int32")
 	assert.NoError(t, err)
 	assert.Equal(t, int32(1), val)
 
-	val, err = FromString("str", "int32")
+	_, err = FromString("str", "int32")
 	assert.Error(t, err)
 
 	val, err = FromString("1", "int64")
 	assert.NoError(t, err)
 	assert.Equal(t, int64(1), val)
 
-	val, err = FromString("str", "int64")
+	_, err = FromString("str", "int64")
 	assert.Error(t, err)
 
 	// uint
@@ -55,35 +55,35 @@ func TestFromString(t *testing.T) {
 	assert.NoError(t, err)
 	assert.Equal(t, uint(1), val)
 
-	val, err = FromString("-1", "uint")
+	_, err = FromString("-1", "uint")
 	assert.Error(t, err)
 
 	val, err = FromString("1", "uint8")
 	assert.NoError(t, err)
 	assert.Equal(t, uint8(1), val)
 
-	val, err = FromString("-1", "uint8")
+	_, err = FromString("-1", "uint8")
 	assert.Error(t, err)
 
 	val, err = FromString("1", "uint16")
 	assert.NoError(t, err)
 	assert.Equal(t, uint16(1), val)
 
-	val, err = FromString("-1", "uint16")
+	_, err = FromString("-1", "uint16")
 	assert.Error(t, err)
 
 	val, err = FromString("1", "uint32")
 	assert.NoError(t, err)
 	assert.Equal(t, uint32(1), val)
 
-	val, err = FromString("-1", "uint32")
+	_, err = FromString("-1", "uint32")
 	assert.Error(t, err)
 
 	val, err = FromString("1", "uint64")
 	assert.NoError(t, err)
 	assert.Equal(t, uint64(1), val)
 
-	val, err = FromString("-1", "uint64")
+	_, err = FromString("-1", "uint64")
 	assert.Error(t, err)
 
 	// float
@@ -92,14 +92,14 @@ func TestFromString(t *testing.T) {
 	assert.NoError(t, err)
 	assert.Equal(t, float32(3.14), val)
 
-	val, err = FromString("str", "float32")
+	_, err = FromString("str", "float32")
 	assert.Error(t, err)
 
 	val, err = FromString("3.14", "float64")
 	assert.NoError(t, err)
 	assert.Equal(t, 3.14, val)
 
-	val, err = FromString("str", "float64")
+	_, err = FromString("str", "float64")
 	assert.Error(t, err)
 
 	// bool
@@ -108,7 +108,7 @@ func TestFromString(t *testing.T) {
 	assert.NoError(t, err)
 	assert.Equal(t, true, val)
 
-	val, err = FromString("1", "bool")
+	_, err = FromString("1", "bool")
 	assert.NoError(t, err)
 	assert.Equal(t, true, val)
 
@@ -116,7 +116,7 @@ func TestFromString(t *testing.T) {
 	assert.NoError(t, err)
 	assert.Equal(t, false, val)
 
-	val, err = FromString("0", "bool")
+	_, err = FromString("0", "bool")
 	assert.NoError(t, err)
 	assert.Equal(t, false, val)
 
@@ -125,6 +125,6 @@ func TestFromString(t *testing.T) {
 
 	// else
 
-	val, err = FromString("0", "invalid")
+	_, err = FromString("0", "invalid")
 	assert.Error(t, err, "cast: type %v is not supported", "invalid")
 }
