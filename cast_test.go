@@ -122,4 +122,9 @@ func TestFromString(t *testing.T) {
 
 	val, err = FromString("invalid", "bool")
 	assert.Error(t, err)
+
+	// else
+
+	val, err = FromString("0", "invalid")
+	assert.Error(t, err)
 }
