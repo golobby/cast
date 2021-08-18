@@ -6,92 +6,113 @@ import (
 	"strconv"
 )
 
+const (
+	Uint8  = "uint8"
+	Uint16 = "uint16"
+	Uint32 = "uint32"
+	Uint64 = "uint64"
+	Uint   = "uint"
+
+	Int8  = "int8"
+	Int16 = "int16"
+	Int32 = "int32"
+	Int64 = "int64"
+	Int   = "int"
+
+	Float32 = "float32"
+	Float64 = "float64"
+
+	Bool = "bool"
+
+	String = "string"
+)
+
 // FromString casts from a string variable to the given type
 func FromString(value string, t string) (interface{}, error) {
 	switch t {
-	case "int":
+	case Int:
 		v, err := strconv.ParseInt(value, 0, 64)
 		if err != nil {
 			return nil, err
 		}
 		return int(v), nil
-	case "int8":
+	case Int8:
 		v, err := strconv.ParseInt(value, 0, 8)
 		if err != nil {
 			return nil, err
 		}
 		return int8(v), nil
-	case "int16":
+	case Int16:
 		v, err := strconv.ParseInt(value, 0, 16)
 		if err != nil {
 			return nil, err
 		}
 		return int16(v), nil
-	case "int32":
+	case Int32:
 		v, err := strconv.ParseInt(value, 0, 32)
 		if err != nil {
 			return nil, err
 		}
 		return int32(v), nil
-	case "int64":
+	case Int64:
 		v, err := strconv.ParseInt(value, 0, 64)
 		if err != nil {
 			return nil, err
 		}
 		return v, nil
 
-	case "uint":
+	case Uint:
 		v, err := strconv.ParseUint(value, 0, 64)
 		if err != nil {
 			return nil, err
 		}
 		return uint(v), nil
-	case "uint8":
+	case Uint8:
 		v, err := strconv.ParseUint(value, 0, 8)
 		if err != nil {
 			return nil, err
 		}
 		return uint8(v), nil
-	case "uint16":
+	case Uint16:
 		v, err := strconv.ParseUint(value, 0, 16)
 		if err != nil {
 			return nil, err
 		}
 		return uint16(v), nil
-	case "uint32":
+	case Uint32:
 		v, err := strconv.ParseUint(value, 0, 32)
 		if err != nil {
 			return nil, err
 		}
 		return uint32(v), nil
-	case "uint64":
+	case Uint64:
 		v, err := strconv.ParseUint(value, 0, 64)
 		if err != nil {
 			return nil, err
 		}
 		return v, nil
 
-	case "bool":
+	case Bool:
 		v, err := strconv.ParseBool(value)
 		if err != nil {
 			return nil, err
 		}
 		return v, nil
 
-	case "float32":
+	case Float32:
 		v, err := strconv.ParseFloat(value, 64)
 		if err != nil {
 			return nil, err
 		}
 		return float32(v), nil
-	case "float64":
+	case Float64:
 		v, err := strconv.ParseFloat(value, 64)
 		if err != nil {
 			return nil, err
 		}
 		return v, nil
 
-	case "string":
+	case String:
 		return value, nil
 	}
 
