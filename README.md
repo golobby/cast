@@ -5,7 +5,7 @@
 [![CodeQL](https://github.com/golobby/cast/workflows/CodeQL/badge.svg)](https://github.com/golobby/cast/actions?query=workflow%3ACodeQL)
 
 # Cast
-A lightweight yet powerful casting package for Go projects
+GoLobby Cast is lightweight yet powerful casting package for Go projects.
 
 ## Documentation
 
