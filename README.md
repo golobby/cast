@@ -4,7 +4,7 @@
 [![Coverage](https://coveralls.io/repos/github/golobby/cast/badge.svg?branch=master)](https://coveralls.io/github/golobby/cast?branch=master)
 [![CodeQL](https://github.com/golobby/cast/workflows/CodeQL/badge.svg)](https://github.com/golobby/cast/actions?query=workflow%3ACodeQL)
 
-# GoLobby Cast
+# Cast
 A lightweight yet powerful casting package for Go projects
 
 ## Documentation
