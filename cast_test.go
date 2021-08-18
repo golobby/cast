@@ -126,5 +126,5 @@ func TestFromString(t *testing.T) {
 	// else
 
 	val, err = FromString("0", "invalid")
-	assert.Error(t, err)
+	assert.Error(t, err, "cast: type %v is not supported", "invalid")
 }
