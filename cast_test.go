@@ -120,7 +120,7 @@ func TestFromString(t *testing.T) {
 	assert.NoError(t, err)
 	assert.Equal(t, false, val)
 
-	val, err = FromString("invalid", "bool")
+	_, err = FromString("invalid", "bool")
 	assert.Error(t, err)
 
 	// else
