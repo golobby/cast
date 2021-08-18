@@ -1,4 +1,4 @@
-// Package cast is a lightweight yet powerful casting library for Go projects.
+// Package cast is a lightweight casting library for Go projects.
 package cast
 
 import (
@@ -31,7 +31,7 @@ const (
 func FromString(value string, t string) (interface{}, error) {
 	switch t {
 	case Int:
-		v, err := strconv.ParseInt(value, 0, 64)
+		v, err := strconv.ParseInt(value, 0, 32)
 		if err != nil {
 			return nil, err
 		}
@@ -62,7 +62,7 @@ func FromString(value string, t string) (interface{}, error) {
 		return v, nil
 
 	case Uint:
-		v, err := strconv.ParseUint(value, 0, 64)
+		v, err := strconv.ParseUint(value, 0, 32)
 		if err != nil {
 			return nil, err
 		}
