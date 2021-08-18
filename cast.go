@@ -2,7 +2,6 @@
 package cast
 
 import (
-	"errors"
 	"fmt"
 	"strconv"
 )
@@ -96,5 +95,5 @@ func FromString(value string, t string) (interface{}, error) {
 		return value, nil
 	}
 
-	return nil, errors.New(fmt.Sprintf("cast: type %v is not supported", t))
+	return nil, fmt.Errorf("cast: type %v is not supported", t)
 }
