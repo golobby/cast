@@ -20,7 +20,7 @@ go get github.com/golobby/cast
 ```
 
 ### Sample Usage
-The following example demonstrates how to use GoLobby Cast package.
+The following example demonstrates how to use the GoLobby Cast package.
 
 ```go
 val, err := cast.FromString("666", "int32")
