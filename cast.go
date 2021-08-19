@@ -28,12 +28,14 @@ const (
 )
 
 // FromString casts from a string variable to the given type
-func FromString(value string, t string) (interface{}, error) {
-	switch t {
+func FromString(value string, targetType string) (interface{}, error) {
+	message := "cast: cannot cast value `%v` to type `%v`"
+
+	switch targetType {
 	case Int:
 		v, err := strconv.ParseInt(value, 0, 32)
 		if err != nil {
-			return nil, err
+			return nil, fmt.Errorf(message, value, targetType)
 		}
 		return int(v), nil
 	case Int8:
@@ -116,5 +118,5 @@ func FromString(value string, t string) (interface{}, error) {
 		return value, nil
 	}
 
-	return nil, fmt.Errorf("cast: type %v is not supported", t)
+	return nil, fmt.Errorf("cast: type %v is not supported", targetType)
 }

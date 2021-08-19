@@ -1,131 +1,134 @@
-package cast
+package cast_test
 
 import (
+	"github.com/golobby/cast"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 )
 
 func TestFromString(t *testing.T) {
+	message := "cast: cannot cast value `%v` to type `%v`"
+
 	// string
 
-	val, err := FromString("string", String)
+	val, err := cast.FromString("string", cast.String)
 	assert.NoError(t, err)
 	assert.Equal(t, "string", val)
 
 	// int
 
-	val, err = FromString("1", Int)
+	val, err = cast.FromString("1", cast.Int)
 	assert.NoError(t, err)
 	assert.Equal(t, 1, val)
 
-	_, err = FromString("str", Int)
-	assert.Error(t, err)
+	_, err = cast.FromString("str", cast.Int)
+	assert.Errorf(t, err, message, "str", cast.Int)
 
-	val, err = FromString("1", Int8)
+	val, err = cast.FromString("1", cast.Int8)
 	assert.NoError(t, err)
 	assert.Equal(t, int8(1), val)
 
-	_, err = FromString("str", Int8)
-	assert.Error(t, err)
+	_, err = cast.FromString("str", cast.Int8)
+	assert.Errorf(t, err, message, "str", cast.Int8)
 
-	val, err = FromString("1", Int16)
+	val, err = cast.FromString("1", cast.Int16)
 	assert.NoError(t, err)
 	assert.Equal(t, int16(1), val)
 
-	_, err = FromString("str", Int16)
-	assert.Error(t, err)
+	_, err = cast.FromString("str", cast.Int16)
+	assert.Errorf(t, err, message, "str", cast.Int16)
 
-	val, err = FromString("1", Int32)
+	val, err = cast.FromString("1", cast.Int32)
 	assert.NoError(t, err)
 	assert.Equal(t, int32(1), val)
 
-	_, err = FromString("str", Int32)
-	assert.Error(t, err)
+	_, err = cast.FromString("str", cast.Int32)
+	assert.Errorf(t, err, message, "str", cast.Int32)
 
-	val, err = FromString("1", Int64)
+	val, err = cast.FromString("1", cast.Int64)
 	assert.NoError(t, err)
 	assert.Equal(t, int64(1), val)
 
-	_, err = FromString("str", Int64)
-	assert.Error(t, err)
+	_, err = cast.FromString("str", cast.Int64)
+	assert.Errorf(t, err, message, "str", cast.Int64)
 
 	// uint
 
-	val, err = FromString("1", Uint)
+	val, err = cast.FromString("1", cast.Uint)
 	assert.NoError(t, err)
 	assert.Equal(t, uint(1), val)
 
-	_, err = FromString("-1", Uint)
-	assert.Error(t, err)
+	_, err = cast.FromString("-1", cast.Uint)
+	assert.Errorf(t, err, message, "-1", cast.Uint)
 
-	val, err = FromString("1", Uint8)
+	val, err = cast.FromString("1", cast.Uint8)
 	assert.NoError(t, err)
 	assert.Equal(t, uint8(1), val)
 
-	_, err = FromString("-1", Uint8)
-	assert.Error(t, err)
+	_, err = cast.FromString("-1", cast.Uint8)
+	assert.Errorf(t, err, message, "-1", cast.Uint8)
 
-	val, err = FromString("1", Uint16)
+	val, err = cast.FromString("1", cast.Uint16)
 	assert.NoError(t, err)
 	assert.Equal(t, uint16(1), val)
 
-	_, err = FromString("-1", Uint16)
-	assert.Error(t, err)
+	_, err = cast.FromString("-1", cast.Uint16)
+	assert.Errorf(t, err, message, "-1", cast.Uint16)
 
-	val, err = FromString("1", Uint32)
+	val, err = cast.FromString("1", cast.Uint32)
 	assert.NoError(t, err)
 	assert.Equal(t, uint32(1), val)
 
-	_, err = FromString("-1", Uint32)
-	assert.Error(t, err)
+	_, err = cast.FromString("-1", cast.Uint32)
+	assert.Errorf(t, err, message, "-1", cast.Uint32)
 
-	val, err = FromString("1", Uint64)
+	val, err = cast.FromString("1", cast.Uint64)
 	assert.NoError(t, err)
 	assert.Equal(t, uint64(1), val)
 
-	_, err = FromString("-1", Uint64)
-	assert.Error(t, err)
+	_, err = cast.FromString("-1", cast.Uint64)
+	assert.Errorf(t, err, message, "-1", cast.Uint64)
 
 	// float
 
-	val, err = FromString("3.14", Float32)
+	val, err = cast.FromString("3.14", cast.Float32)
 	assert.NoError(t, err)
 	assert.Equal(t, float32(3.14), val)
 
-	_, err = FromString("str", Float32)
-	assert.Error(t, err)
+	_, err = cast.FromString("str", cast.Float32)
+	assert.Errorf(t, err, message, "str", cast.Float32)
 
-	val, err = FromString("3.14", Float64)
+	val, err = cast.FromString("3.14", cast.Float64)
 	assert.NoError(t, err)
 	assert.Equal(t, 3.14, val)
 
-	_, err = FromString("str", Float64)
-	assert.Error(t, err)
+	_, err = cast.FromString("str", cast.Float64)
+	assert.Errorf(t, err, message, "str", cast.Float64)
 
 	// bool
 
-	val, err = FromString("true", Bool)
+	val, err = cast.FromString("true", cast.Bool)
 	assert.NoError(t, err)
 	assert.Equal(t, true, val)
 
-	_, err = FromString("1", Bool)
+	_, err = cast.FromString("1", cast.Bool)
 	assert.NoError(t, err)
 	assert.Equal(t, true, val)
 
-	val, err = FromString("false", Bool)
+	val, err = cast.FromString("false", cast.Bool)
 	assert.NoError(t, err)
 	assert.Equal(t, false, val)
 
-	_, err = FromString("0", Bool)
+	_, err = cast.FromString("0", cast.Bool)
 	assert.NoError(t, err)
 	assert.Equal(t, false, val)
 
-	_, err = FromString("invalid", Bool)
-	assert.Error(t, err)
+	_, err = cast.FromString("invalid", cast.Bool)
+	assert.Errorf(t, err, message, "invalid", cast.Bool)
 
 	// else
 
-	_, err = FromString("0", "invalid")
+	_, err = cast.FromString("0", "invalid")
 	assert.Error(t, err, "cast: type %v is not supported", "invalid")
 }
