@@ -1,7 +1,7 @@
 [![GoDoc](https://godoc.org/github.com/golobby/cast?status.svg)](https://godoc.org/github.com/golobby/cast)
 [![CI](https://github.com/golobby/cast/actions/workflows/ci.yml/badge.svg)](https://github.com/golobby/cast/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/golobby/cast/workflows/CodeQL/badge.svg)](https://github.com/golobby/cast/actions?query=workflow%3ACodeQL)
-[![Report](https://goreportcard.com/badge/github.com/golobby/cast)](https://goreportcard.com/report/github.com/golobby/cast)
+[![Report](https://goreportcard.com/badge/github.com/golobby/cast?v=1)](https://goreportcard.com/report/github.com/golobby/cast)
 [![Coverage Status](https://coveralls.io/repos/github/golobby/cast/badge.svg?branch=master&v=1)](https://coveralls.io/github/golobby/cast?branch=master)
 
 # Cast
