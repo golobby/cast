@@ -1,8 +1,8 @@
 [![GoDoc](https://godoc.org/github.com/golobby/cast?status.svg)](https://godoc.org/github.com/golobby/cast)
-[![Build Status](https://travis-ci.com/golobby/cast.svg?branch=master)](https://travis-ci.com/golobby/cast)
-[![Report](https://goreportcard.com/badge/github.com/golobby/cast)](https://goreportcard.com/report/github.com/golobby/cast)
-[![Coverage Status](https://coveralls.io/repos/github/golobby/cast/badge.svg?branch=master)](https://coveralls.io/github/golobby/cast?branch=master)
+[![CI](https://github.com/golobby/cast/actions/workflows/ci.yml/badge.svg)](https://github.com/golobby/cast/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/golobby/cast/workflows/CodeQL/badge.svg)](https://github.com/golobby/cast/actions?query=workflow%3ACodeQL)
+[![Report](https://goreportcard.com/badge/github.com/golobby/cast?v=1)](https://goreportcard.com/report/github.com/golobby/cast)
+[![Coverage Status](https://coveralls.io/repos/github/golobby/cast/badge.svg?branch=master&v=1)](https://coveralls.io/github/golobby/cast?branch=master)
 
 # Cast
 GoLobby Cast is lightweight casting package for Go projects.
