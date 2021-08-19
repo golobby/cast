@@ -27,7 +27,7 @@ val, err := cast.FromString("666", "int32")
 // `val` type: int32
 // `val` value: 666
 
-val, err := cast.FromString("1", "bool")
+val, err := cast.FromString("1", cast.Bool)
 // `val` type: bool
 // `val` value: true
 ```
