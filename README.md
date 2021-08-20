@@ -5,7 +5,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/golobby/cast/badge.svg)](https://coveralls.io/github/golobby/cast?branch=master)
 
 # Cast
-GoLobby Cast is lightweight casting package for Go projects.
+GoLobby Cast is a lightweight casting package for Go projects.
 
 ## Documentation
 
