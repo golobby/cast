@@ -20,13 +20,15 @@ go get github.com/golobby/cast
 ```
 
 ### Sample Usage
-The following example demonstrates how to use the GoLobby Cast package.
+The following examples demonstrate how to use the GoLobby Cast package.
 
 ```go
 val, err := cast.FromString("666", "int32")
 // `val` type: int32
 // `val` value: 666
+```
 
+```go
 val, err := cast.FromString("1", cast.Bool)
 // `val` type: bool
 // `val` value: true
