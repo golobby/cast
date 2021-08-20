@@ -8,7 +8,7 @@ import (
 )
 
 func TestFromString(t *testing.T) {
-	message := "cast: cannot cast value `%v` to type `%v`"
+	message := "cast: cannot cast `%v` to type `%v`"
 
 	// string
 

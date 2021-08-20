@@ -1,4 +1,4 @@
-// Package cast is a lightweight casting library for Go projects.
+// Package cast is a lightweight casting library.
 package cast
 
 import (
@@ -27,9 +27,9 @@ const (
 	String = "string"
 )
 
-// FromString casts from a string variable to the given type
+// FromString casts a string value to the given type.
 func FromString(value string, targetType string) (interface{}, error) {
-	message := "cast: cannot cast value `%v` to type `%v`"
+	message := "cast: cannot cast `%v` to type `%v`"
 
 	switch targetType {
 	case Int:
