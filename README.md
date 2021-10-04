@@ -19,7 +19,7 @@ To install this package, run the following command in your project directory.
 go get github.com/golobby/cast
 ```
 
-### Sample Usage
+### Usage Example
 The following examples demonstrate how to use the GoLobby Cast package.
 
 ```go
@@ -33,6 +33,14 @@ val, err := cast.FromString("1", cast.Bool)
 // `val` type: bool
 // `val` value: true
 ```
+
+### Supported Types
+Currently, the GoLobby Cast supports the following types:
+* Int (Int8 .. Int64)
+* Uint (Uint8 .. Uint64)
+* Float32 and Float64
+* Bool
+* String
 
 ## License
 GoLobby Cast is released under the [MIT License](http://opensource.org/licenses/mit-license.php).
