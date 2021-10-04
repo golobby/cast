@@ -241,7 +241,7 @@ func FromString(value string, targetType string) (interface{}, error) {
 
 func Map(csv, kind string, callback func(v interface{})) error {
 	for _, value := range strings.Split(csv, ",") {
-		if typedValue, err := FromString(value, kind); err != nil {
+		if typedValue, err := FromString(strings.Trim(value, " \n\r"), kind); err != nil {
 			return err
 		} else {
 			callback(typedValue)

@@ -143,7 +143,7 @@ func TestFromString(t *testing.T) {
 	val, err = cast.FromString("a,b,c", cast.Int8Array)
 	assert.Error(t, err)
 
-	val, err = cast.FromString("4,-5,6", cast.Int16Array)
+	val, err = cast.FromString("4,-5, 6", cast.Int16Array)
 	assert.NoError(t, err)
 	assert.Equal(t, []int16{4, -5, 6}, val)
 
@@ -203,15 +203,24 @@ func TestFromString(t *testing.T) {
 	assert.NoError(t, err)
 	assert.Equal(t, []float32{3.14, 9.8}, val)
 
+	val, err = cast.FromString("a,b,c", cast.Float32Array)
+	assert.Error(t, err)
+
 	val, err = cast.FromString("3.14,9.8", cast.Float64Array)
 	assert.NoError(t, err)
 	assert.Equal(t, []float64{3.14, 9.8}, val)
+
+	val, err = cast.FromString("a,b,c", cast.Float64Array)
+	assert.Error(t, err)
 
 	val, err = cast.FromString("true,false,0,1", cast.BoolArray)
 	assert.NoError(t, err)
 	assert.Equal(t, []bool{true, false, false, true}, val)
 
-	val, err = cast.FromString("a,b,c", cast.StringArray)
+	val, err = cast.FromString("a,b,c", cast.BoolArray)
+	assert.Error(t, err)
+
+	val, err = cast.FromString("a, b, c", cast.StringArray)
 	assert.NoError(t, err)
 	assert.Equal(t, []string{"a", "b", "c"}, val)
 
