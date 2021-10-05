@@ -34,18 +34,6 @@ val, err := cast.FromString("1", cast.Bool)
 // `val` value: true
 ```
 
-```go
-array, err := cast.FromString("a,b,c", "[]string")
-// `array` type: []string
-// `array` values: "a", "b", "c"
-```
-
-```go
-array, err := cast.FromString("3.14,9.8", "[]float32")
-// `array` type: []float32
-// `array` values: 3.14, 9.8
-```
-
 ### Supported Types
 Currently, the GoLobby Cast supports the following types and related array types:
 * Int (Int8 .. Int64)
