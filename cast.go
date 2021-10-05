@@ -123,7 +123,7 @@ func FromString(value string, targetType string) (interface{}, error) {
 	return nil, fmt.Errorf("cast: type %v is not supported", targetType)
 }
 
-// FromType casts a string value to the given reflect type.
+// FromType casts a string value to the given reflected type.
 func FromType(value string, targetType reflect.Type) (interface{}, error) {
 	var typeName = targetType.String()
 
@@ -132,10 +132,10 @@ func FromType(value string, targetType reflect.Type) (interface{}, error) {
 		array := reflect.New(targetType).Elem()
 
 		for _, v := range strings.Split(value, ",") {
-			if typedValue, err := FromString(strings.Trim(v, " \n\r"), itemType); err != nil {
+			if item, err := FromString(strings.Trim(v, " \n\r"), itemType); err != nil {
 				return array.Interface(), err
 			} else {
-				array = reflect.Append(array, reflect.ValueOf(typedValue))
+				array = reflect.Append(array, reflect.ValueOf(item))
 			}
 		}
 
