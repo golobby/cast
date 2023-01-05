@@ -1,6 +1,6 @@
 module github.com/golobby/cast
 
-go 1.11
+go 1.16
 
 require (
 	github.com/kr/pretty v0.3.1 // indirect
