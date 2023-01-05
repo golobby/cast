@@ -10,7 +10,7 @@ GoLobby Cast is a lightweight casting package for Go projects.
 ## Documentation
 
 ### Required Go Versions
-It requires Go `v1.11` or newer versions.
+It requires Go `v1.16` or newer versions.
 
 ### Installation
 To install this package, run the following command in your project directory.
